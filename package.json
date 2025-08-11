@@ -1,17 +1,15 @@
 {
-  "name": "react-ts-vite-unocss-starter",
+  "name": "react-ts-mobx-less-vite-starter",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "prepare": "npx husky",
     "dev": "vite",
     "build": "vite build",
-    "clean": "rm -rf node_modules pnpm-lock.yaml && pnpm install",
-    "gen-assets": "tsx scripts/gen-assets.ts"
+    "clean": "rm -rf node_modules pnpm-lock.yaml",
+    "gen-assets": "npx tsx scripts/gen-assets.ts",
+    "gen-comp": "npx tsx scripts/gen-comp.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "prettier": {
     "printWidth": 85,
     "jsxBracketSameLine": true,
@@ -22,27 +20,25 @@
     "jsxSingleQuote": true
   },
   "dependencies": {
-    "@gitborlando/utils": "^1.7.0",
-    "@gitborlando/widget": "^1.0.1",
+    "@gitborlando/utils": "^4.0.0",
+    "@gitborlando/widget": "^1.0.2",
+    "immer": "^10.1.1",
     "mobx": "^6.13.7",
-    "mobx-react": "^9.2.0",
+    "mobx-react-lite": "^4.1.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "unplugin-auto-import": "^19.3.0"
+    "suspend-react": "^0.1.3"
   },
   "devDependencies": {
-    "@gitborlando/uno-preset": "^1.0.6",
     "@types/node": "^24.0.15",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
-    "@unocss/preset-rem-to-px": "^66.3.3",
     "@vitejs/plugin-react-swc": "^3.11.0",
     "husky": "^9.1.7",
     "pretty-quick": "^4.2.2",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
-    "unocss": "^66.3.3",
-    "unocss-preset-css-var": "1.0.0-beta.37",
+    "unplugin-auto-import": "^19.3.0",
     "vite": "^7.0.5"
   }
 }

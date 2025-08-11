@@ -1,7 +1,7 @@
+import 'src/styles/index.css'
+
 import { createRoot } from 'react-dom/client'
 import { App } from './app'
-
-import 'virtual:uno.css'
 
 const root = createRoot(document.getElementById('root')!)
 root.render(<App />)
