@@ -19,7 +19,7 @@ export default defineConfig({
         },
         {
           from: 'react',
-          import: ['FC'],
+          imports: ['FC'],
           type: true,
         },
       ],
