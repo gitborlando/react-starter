@@ -17,6 +17,11 @@ export default defineConfig({
           'src/assets/assets': ['Assets'],
           '@gitborlando/widget': ['Flex'],
         },
+        {
+          from: 'react',
+          import: ['FC'],
+          type: true,
+        },
       ],
     }),
   ],
