@@ -1,14 +1,13 @@
 {
-  "name": "react-ts-mobx-less-vite-starter",
+  "name": "react-ts-mobx-linaria-vite-starter",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "prepare": "npx husky",
     "dev": "vite",
     "build": "vite build",
-    "clean": "rm -rf node_modules pnpm-lock.yaml",
-    "gen-assets": "npx tsx scripts/gen-assets.ts",
-    "gen-comp": "npx tsx scripts/gen-comp.ts"
+    "re-i": "rm -rf node_modules pnpm-lock.yaml && pnpm i",
+    "prepare": "npx simple-git-hooks",
+    "gen-assets": "npx tsx scripts/gen-assets.ts"
   },
   "prettier": {
     "printWidth": 85,
@@ -20,7 +19,7 @@
     "jsxSingleQuote": true
   },
   "dependencies": {
-    "@gitborlando/utils": "^4.0.0",
+    "@gitborlando/utils": "^4.9.1",
     "@gitborlando/widget": "^1.0.2",
     "immer": "^10.1.1",
     "mobx": "^6.13.7",
@@ -30,16 +29,20 @@
     "suspend-react": "^0.1.3"
   },
   "devDependencies": {
+    "@linaria/core": "^6.3.0",
     "@types/node": "^24.0.15",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react-swc": "^3.11.0",
-    "husky": "^9.1.7",
-    "less": "^4.4.0",
+    "@wyw-in-js/vite": "^0.7.0",
     "pretty-quick": "^4.2.2",
+    "simple-git-hooks": "^2.13.1",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
     "unplugin-auto-import": "^19.3.0",
     "vite": "^7.0.5"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx pretty-quick --staged"
   }
 }

@@ -1,30 +1,10 @@
 import react from '@vitejs/plugin-react-swc'
 import path from 'path'
-import autoImport from 'unplugin-auto-import/vite'
 import { defineConfig } from 'vite'
+import { autoImportConfig } from './auto-import'
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    autoImport({
-      include: [/\.[tj]sx?$/],
-      imports: [
-        'react',
-        'mobx',
-        'mobx-react-lite',
-        {
-          'src/assets/assets': ['Assets'],
-          '@gitborlando/widget': ['Flex'],
-        },
-        {
-          from: 'react',
-          imports: ['FC'],
-          type: true,
-        },
-      ],
-    }),
-  ],
+  plugins: [react(), autoImportConfig],
 
   resolve: {
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json'],

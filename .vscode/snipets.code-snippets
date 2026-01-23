@@ -1,0 +1,44 @@
+{
+  "Component": {
+    "prefix": "comp",
+    "body": [
+      "export const $1${TM_FILENAME_BASE}Comp: FC<{}> = observer(({}) => {",
+      "  return <G className={cls()}></G>",
+      "})",
+      "",
+      "const cls = classes(css``)",
+    ],
+    "description": "Component",
+  },
+  "Sub Component": {
+    "prefix": "subcomp",
+    "body": ["const $1Comp: FC<{}> = observer(({}) => { return (<G></G>) })"],
+    "description": "Sub Component",
+  },
+  "Widget": {
+    "prefix": "widget",
+    "scope": "typescriptreact",
+    "body": [
+      "export const $1${TM_FILENAME_BASE} = forwardRef<",
+      "  HTMLDivElement,",
+      "  ComponentPropsWithRef<'div'> & {}",
+      ">(({ className, ...rest }, ref) => {",
+      "  return <G className={cls()} {...rest} ref={ref}></G>",
+      "})",
+      "",
+      "const cls = classes(css``)",
+    ],
+    "description": "Widget",
+  },
+  "Service": {
+    "prefix": "service",
+    "body": [
+      "class $1${TM_FILENAME_BASE}Service {",
+      "}",
+      "",
+      "export const $1${TM_FILENAME_BASE} = autoBind(makeObservable(new $1${TM_FILENAME_BASE}Service()))",
+      "",
+    ],
+    "description": "Service",
+  },
+}
