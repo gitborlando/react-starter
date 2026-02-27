@@ -12,6 +12,7 @@ export const autoImportConfig = autoImportPlugin({
       'src/assets/assets': ['Assets'],
       'src/styles/styles': ['styles'],
       'src/styles/classes': ['classes'],
+      'src/comps/g': ['Grid', 'G'],
     },
     {
       from: 'react',
